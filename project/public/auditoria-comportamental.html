@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/auditoria-comportamental.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>SDL DDSMA</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <span>Auditoria Comportamental</span>
+            <button onclick="imprimirLancamentos()" id="print">Imprimir Lançamentos</button>
+            <button onclick="openModal()" id="new">Lançar</button>
+        </div>
+
+        <input type="text" id="searchInput" placeholder="Pesquisar Lançamentos..." />
+
+        <div class="divTable">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Auditoria</th>
+                        <th>Líder</th>
+                        <th>Unidade</th>
+                        <th>Local</th>
+                        <th>Especialidade</th>
+                        <th>Desvio</th>
+                        <th>Descrição</th>
+                        <th>Tratativa</th>
+                        <th class="acao">Editar</th>
+                        <th class="acao">Excluir</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <div class="modal-container">
+        <div class="modal">
+            <form> 
+                <label for="mData">Data da Auditoria</label>
+                <input type="date" id="mData" required>
+                
+                <label for="mUnidade">Unidade</label>
+                <select name="Unidade" id="mUnidade" required>
+                    <option value="">Escolha a Unidade</option>
+                    <option value="Q1">Q1 BA</option>
+                    <option value="PE1">PE1 BA</option>
+                    <option value="PE2">PE2 BA</option>
+                    <option value="PE3">PE3 BA</option>
+                    <option value="PVC">PVC BA</option>
+                    <option value="TEGAL">TEGAL</option>
+                </select>
+
+                <label for="mLocal">Local</label>
+                <select name="Local" id="mLocal" required>
+                    <option value="">Escolha o Local</option>
+                    <option value="UO1">UO1</option>
+                    <option value="UO2">UO2</option>
+                    <option value="UA1">UA1</option>
+                    <option value="UA2">UA2</option>
+                    <option value="UTE">UTE</option>
+                    <option value="PE1">PE1</option>
+                    <option value="PE2">PE2</option>
+                    <option value="PE3">PE3</option>
+                    <option value="PVC">PVC</option>
+                    <option value="MVC">MVC</option>
+                    <option value="TEGAL">TEGAL</option>
+                </select>
+
+                <label for="mEspecialidade">Especialidade</label>
+                <select name="Especialidade" id="mEspecialidade" required>
+                    <option value="">Escolha a Especialidade</option>
+                    <option value="Andaime">Andaime</option>
+                    <option value="Pintura">Pintura</option>
+                    <option value="Isolamento Térmico">Isolamento Térmico</option>
+                    <option value="Logística">Logística</option>
+                </select>
+
+                <label for="mDesvio">Ocorreu Desvio?</label>
+                <select name="Desvio" id="mDesvio" required>
+                    <option value="">Escolha a Opção</option>
+                    <option value="Sim">Sim</option>
+                    <option value="Não">Não</option>
+                </select>
+
+                <label for="mClasses">Classes</label>
+<div class="custom-select" id="mClasses">
+    <div class="select-selected">Selecione as Classes</div>
+    <div class="select-items select-hide">
+        <div class="custom-checkbox">
+            <input type="checkbox" value="Classe A" id="classeA">
+            <label for="classeA">Classe A - REAÇÃO DAS PESSOAS</label>
+        </div>
+        <div class="custom-checkbox">
+            <input type="checkbox" value="Classe B" id="classeB">
+            <label for="classeB">Classe B - POSIÇÃO DAS PESSOAS</label>
+        </div>
+        <div class="custom-checkbox">
+            <input type="checkbox" value="Classe C" id="classeC">
+            <label for="classeC">Classe C - PROCEDIMENTOS</label>
+        </div>
+        <div class="custom-checkbox">
+            <input type="checkbox" value="Classe D" id="classeD">
+            <label for="classeD">Classe D - FERRAMENTAS/MÁQUINAS E EQUIPAMENTOS</label>
+        </div>
+        <div class="custom-checkbox">
+            <input type="checkbox" value="Classe E" id="classeE">
+            <label for="classeE">Classe E - EPI</label>
+        </div>
+        <div class="custom-checkbox">
+            <input type="checkbox" value="Classe F" id="classeF">
+            <label for="classeF">Classe F - ORDEM, ARRUMAÇÃO E LIMPEZA</label>
+        </div>
+    </div>
+</div>
+                <label for="mDescrição">Descrição de Desvio</label>
+                <input type="text" id="mDescrição">
+            
+                <label for="mTratativa">Descrição de Tratativa</label>
+                <input type="text" id="mTratativa">
+
+                <button type="button" id="btnSalvar">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+<script src="js/auditoria-comportamental.js"></script>
+
+</html>

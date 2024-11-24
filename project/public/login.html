@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/styles.css"> 
+</head>
+<body>
+    <div class="Corpo01">
+        <h1>LOGIN</h1>
+        <form id="loginForm"> <!-- Removido o action e method do formulário para tratar via JS -->
+            <div class="input-box">
+                <input type="text" name="username" placeholder="Nome do usuário" required>
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" name="password" placeholder="Senha" required>
+                <i class="fas fa-lock"></i>
+            </div>
+            <div class="relembrar-usuário">
+                <label>
+                    <input type="checkbox" name="remember"> Lembrar-me
+                </label>
+            </div>
+            <button type="submit" class="bnt">ENTRAR</button>
+            <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se aqui</a></p>
+        </form>
+    </div>
+    <script src="js/login.js"></script> <!-- Adicionando o arquivo JS para login -->
+</body>
+</html>

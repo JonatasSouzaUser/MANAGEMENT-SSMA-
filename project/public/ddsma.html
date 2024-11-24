@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/ddsma.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>SDL DDSMA</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <span>Lançamento de DDSMA</span>
+            <button onclick="imprimirLancamentos()" id="print">Imprimir Lançamentos</button>
+            <button onclick="openModal()" id="new">Lançar</button>
+        </div>
+
+        <input type="text" id="searchInput" placeholder="Pesquisar Lançamentos..." />
+
+        <div class="divTable">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Lançamento</th>
+                        <th>Líder</th>
+                        <th>Especialidade</th>
+                        <th>Nota 01</th>
+                        <th>Nota 02</th>
+                        <th>Nota 03</th>
+                        <th>Nota 04</th>
+                        <th>Nota 05</th>
+                        <th>Total</th>
+                        <th class="acao">Editar</th>
+                        <th class="acao">Excluir</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <div class="modal-container">
+        <div class="modal">
+            <form> 
+                <label for="mData">Data de Lançamento</label>
+                <input type="date" id="mData" required>
+
+                <label for="mEspecialidade">Especialidade</label>
+                <select name="Especialidade" id="mEspecialidade" required>
+                    <option value="">Escolha a Especialidade</option>
+                    <option value="Andaime">Andaime</option>
+                    <option value="Pintura">Pintura</option>
+                    <option value="Isolamento Térmico">Isolamento Térmico</option>
+                    <option value="Complementar">Complementar</option>
+                    <option value="SSMA">SSMA</option>
+                    <option value="Gestão">Gestão</option>
+                </select>
+
+                <label for="mDiasPrevistos">Dias Previsto</label>
+                <input type="number" id="mDiasPrevistos" required>
+                <label for="mDiasRealizados">Dias Realizados</label>
+                <input type="number" id="mDiasRealizados" required>
+
+                <label for="mParticipantesPrevistos">Participantes Previstos</label>
+                <input type="number" id="mParticipantesPrevistos" required>
+                <label for="mParticipantesPresentes">Participantes Presentes</label>
+                <input type="number" id="mParticipantesPresentes" required>
+
+                <label for="mPergunta01">Líder preencheu o cabeçalho?</label>
+                <select name="pergunta01" id="mPergunta01" required>
+                    <option value="">Escolha a Opção</option>
+                    <option value="Positivo">Sim</option>
+                    <option value="Negativo">Não</option>
+                </select> 
+
+                <label for="mPergunta02">Formulário está assinado?</label>
+                <select name="pergunta02" id="mPergunta02" required>
+                    <option value="">Escolha a Opção</option>
+                    <option value="Positivo">Sim</option>
+                    <option value="Negativo">Não</option>
+                </select> 
+
+                <label for="mPergunta03">Contém matrícula dos liderados?</label>
+                <select name="pergunta03" id="mPergunta03" required>
+                    <option value="">Escolha a Opção</option>
+                    <option value="Positivo">Sim</option>
+                    <option value="Negativo">Não</option>
+                </select> 
+
+                <button type="button" id="btnSalvar">Salvar</button></form>
+        
+        </div>
+    </div>
+
+</body>
+
+<script src="js/ddsma.js"></script>
+
+</html>

@@ -1,0 +1,134 @@
+/* Importa a fonte Poppins do Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+/* Define as configurações padrão para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif; /* Define a fonte para toda a página */
+}
+
+/* Estiliza o corpo da página */
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Altura mínima da viewport */
+    background-image: url(../img/Background_Dark.png); /* Define a imagem de fundo */
+    background-size: cover; /* Cobrir toda a área do elemento pai */
+    background-position: center; /* Centralizar a imagem de fundo */
+}
+
+/* Estiliza o contêiner principal */
+.Corpo01{
+    width: 420px;
+    background: transparent;
+    border: 2px solid azure;
+    -webkit-backdrop-filter: blur(10px); /* Aplica um efeito de desfoque ao fundo */
+    backdrop-filter: blur(10px); /* Aplica um efeito de desfoque ao fundo */
+    box-shadow: 0 0 10px rgb(70, 101, 136); /* Adiciona uma sombra */
+    color: azure; /* Define a cor do texto */
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+    padding: 30px 40px; /* Adiciona preenchimento interno */
+}
+
+/* Estiliza o título */
+.Corpo01 h1 {
+    font-size: 25px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; /* Define a fonte do título */
+    margin-bottom: 20px; /* Adiciona margem inferior */
+}
+
+/* Estiliza as caixas de entrada de texto */
+.Corpo01 .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0; /* Adiciona margem superior e inferior */
+}
+
+/* Estiliza os campos de entrada */
+.input-box input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: 2px solid rgb(231, 240, 248);
+    border-radius: 5px;
+    font-size: 16px;
+    color: azure;
+    padding: 20px 45px 20px 20px;
+    font-weight: 50;
+    outline: none;
+}
+
+/* Estiliza o texto de espaço reservado nos campos de entrada */
+.input-box input::placeholder{
+    color: azure;
+}
+
+/* Estiliza os ícones nos campos de entrada */
+.input-box i{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: azure; /* Define a cor dos ícones */
+}
+
+/* Estiliza o rótulo e a caixa de seleção "Lembrar-se de mim" */
+.Corpo01 .relembrar-usuário {
+   display: flex;
+   justify-content: space-between;
+   font-size: 14.5px;
+   margin: -15px 0 15px; /* Adiciona margem superior e inferior */
+   color: azure; /* Define a cor do texto */
+}
+
+/* Estiliza a caixa de seleção "Lembrar-se de mim" */
+.relembrar-usuário label input{
+    color: #fff;
+    margin-right: 3px;
+    font-weight: 50;
+}
+
+/* Estiliza o botão de login e cadastro */
+.Corpo01 .bnt {
+    width: 100%;
+    height: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #033055;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s; /* Adiciona uma transição suave */
+}
+
+/* Estiliza o botão ao passar o mouse */
+.Corpo01 .bnt:hover {
+    background: #1870ab; /* Cor de fundo ao passar o mouse */
+    color: #fff; /* Cor do texto ao passar o mouse */
+}
+
+
+/* Estiliza o link de cadastro */
+.Corpo01 p {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.Corpo01 a {
+    color: #a1c4fd;
+    text-decoration: none;
+    font-weight: 500; /* Peso de fonte mais forte */
+}
+
+.Corpo01 a:hover {
+    text-decoration: underline;
+}

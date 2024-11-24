@@ -1,0 +1,82 @@
+/* Importa a fonte Poppins do Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+/* Define as configurações padrão para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Remove sublinhado dos links dentro dos blocos */
+.grid-item, .grid-item h2, .grid-item p {
+    text-decoration: none;
+}
+
+/* Estiliza o corpo da página */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(../img/Background_Dark.png); /* Defina o caminho correto da imagem */
+    background-size: cover;
+    background-position: center;
+    -webkit-backdrop-filter: blur(8px); /* Leve desfoque no fundo */
+    backdrop-filter: blur(4px);
+}
+
+/* Estiliza o container principal da dashboard */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    background: rgba(255, 255, 255, 0.1); /* Fundo branco transparente */
+    border: 2px solid white;
+    box-shadow: 0 0 10px white; /* Brilho na borda */    
+    border-radius: 15px;
+    padding: 30px;
+}
+
+/* Estiliza os blocos de navegação */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas de tamanhos iguais */
+    gap: 20px;
+}
+
+.grid-item {
+    background-color: rgb(204, 237, 253); /* Fundo translúcido */
+    border: 2px solid rgb(240, 255, 255);
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    color: #053352;
+    font-weight: 600;
+}
+
+.grid-item:hover {
+    background-color: #1870ab; /* Cor ao passar o mouse */
+    transform: scale(1.05); /* Leve aumento no hover */
+    color: #fff;
+}
+
+/* Estiliza os títulos dos blocos */
+.grid-item h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-decoration: none; /* Remove sublinhado dos títulos */
+}
+
+/* Estiliza o conteúdo dos blocos */
+.grid-item p {
+    font-size: 14px;
+    text-decoration: none; /* Remove sublinhado dos textos */
+}
+
+/* Ajusta o alinhamento da linha inferior com dois itens */
+.full-width {
+    grid-column: span 2; /* Ocupa 2 colunas para cada item */
+}

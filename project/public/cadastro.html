@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="Corpo01">
+        <h1>CADASTRO</h1>
+        <form id="registerForm"> <!-- Formulário para cadastro -->
+            <div class="input-box">
+                <input type="text" name="username" placeholder="Nome do usuário" required>
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" name="password" placeholder="Senha" required>
+                <i class="fas fa-lock"></i>
+            </div>
+            <button type="submit" class="bnt">Cadastrar</button>
+            <p>Já tem uma conta? <a href="login.html">Login aqui</a></p>
+        </form>
+    </div>
+    <script src="js/cadastro.js"></script> <!-- Adicionando o arquivo JS para cadastro -->
+</body>
+</html>

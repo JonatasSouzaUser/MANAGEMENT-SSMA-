@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/auditoria-pt.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>SDL DDSMA</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <span>Auditorias de PT</span>
+            <button onclick="imprimirLancamentos()" id="print">Imprimir Lançamentos</button>
+            <button onclick="openModal()" id="new">Lançar</button>
+        </div>
+
+        <input type="text" id="searchInput" placeholder="Pesquisar Lançamentos..." />
+
+        <div class="divTable">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Auditoria</th>
+                        <th>Líder</th>
+                        <th>Unidade</th>
+                        <th>Local</th>
+                        <th>Especialidade</th>
+                        <th>Tipo de PT</th>
+                        <th>Desvio</th>
+                        <th>Descrição</th>
+                        <th>Tratativa</th>
+                        <th class="acao">Editar</th>
+                        <th class="acao">Excluir</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <div class="modal-container">
+        <div class="modal">
+            <form> 
+                <label for="mData">Data da Auditoria</label>
+                <input type="date" id="mData" required>
+                
+                <label for="mUnidade">Unidade</label>
+                <select name="Unidade" id="mUnidade" required>
+                    <option value="">Escolha a Unidade</option>
+                    <option value="Q1">Q1 BA</option>
+                    <option value="PE1">PE1 BA</option>
+                    <option value="PE2">PE2 BA</option>
+                    <option value="PE3">PE3 BA</option>
+                    <option value="PVC">PVC BA</option>
+                    <option value="TEGAL">TEGAL</option>
+                </select>
+
+                <label for="mLocal">Local</label>
+                    <select name="Local" id="mLocal" required>
+                        <option value="">Escolha o Local</option>
+                        <option value="UO1">UO1</option>
+                        <option value="UO2">UO2</option>
+                        <option value="UA1">UA1</option>
+                        <option value="UA2">UA2</option>
+                        <option value="UTE">UTE</option>
+                        <option value="PE1">PE1</option>
+                        <option value="PE2">PE2</option>
+                        <option value="PE3">PE3</option>
+                        <option value="PVC">PVC</option>
+                        <option value="MVC">MVC</option>
+                        <option value="TEGAL">TEGAL</option>
+                    </select>
+
+                <label for="mEspecialidade">Especialidade</label>
+                <select name="Especialidade" id="mEspecialidade" required>
+                    <option value="">Escolha a Especialidade</option>
+                    <option value="Andaime">Andaime</option>
+                    <option value="Pintura">Pintura</option>
+                    <option value="Isolamento Térmico">Isolamento Térmico</option>
+                    <option value="Logística">Logística</option>
+                </select>
+
+                <label for="mPT">Tipo de PT</label>
+                    <select name="PT" id="mPT" required>
+                        <option value="">Escolha o tipo de PT</option>
+                        <option value="A FRIO">A FRIO</option>
+                        <option value="A QUENTE">A QUENTE</option>
+                        <option value="ESPAÇO CONFINADO">ESPAÇO CONFINADO</option>
+                        <option value="SIMPLIFICADA">SIMPLIFICADA</option>
+                        <option value="PTL">PTL</option>
+                    </select>
+
+                <label for="mDesvio">Ocorreu Desvio?</label>
+                <select name="Desvio" id="mDesvio" required>
+                    <option value="">Escolha a Opção</option>
+                    <option value="EPI">EPI</option>
+                    <option value="Ergonomia">Ergonomia</option>
+                    <option value="Procedimento">Procedimento</option>
+                    <option value="Ato Inseguro">Ato Inseguro</option>
+                    <option value="Risco de Queda">Risco de Queda</option>
+                    <option value="Condição Insegura">Condição Insegura</option>
+                    <option value="Organização">Organização e Limpeza</option>
+                    <option value="Ferramentas e Equipamentos">Ferramentas e Equipamentos</option>
+                    <option value="NA">NA</option>
+                </select> 
+
+                <label for="mDescrição">Descrição de Desvio</label>
+                <input type="text" id="mDescrição"></input>
+            
+                <label for="mTratativa">Descrição de Tratativa</label>
+                <input type="text" id="mTratativa"></input>
+
+                <button type="button" id="btnSalvar">Salvar</button></form>
+        
+        </div>
+    </div>
+</body>
+
+<script src="js/auditoria-pt.js"></script>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Define a codificação de caracteres -->
+    <meta charset="UTF-8">
+    <!-- Define a largura da viewport para ser igual à largura do dispositivo e a escala inicial como 1.0 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define a compatibilidade do Internet Explorer -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Link para o arquivo de estilos CSS -->
+    <link rel="stylesheet" href="css/cadastro-líderes.css">
+    <!-- Link para a biblioteca de ícones Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Título da página -->
+    <title>SDL</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Cabeçalho da página -->
+        <div class="header">
+            <!-- Título do cabeçalho -->
+            <span>Gerenciamento de Líderes</span>
+            <!-- Botão para imprimir lançamentos -->
+            <button onclick="imprimirLancamentos()" id="print">Imprimir Lançamentos</button>
+            <!-- Botão para abrir o modal de inclusão -->
+            <button onclick="openModal()" id="new">Incluir</i></button>
+        </div>
+        
+        <!-- Campo de pesquisa por nome -->
+        <input type="text" id="searchInput" placeholder="Pesquisar Nome..." />
+        
+        <!-- Tabela para exibir os dados dos líderes -->
+        <div class="divTable">
+            <table>
+                <!-- Cabeçalho da tabela -->
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Matrícula</th>
+                        <th>Função</th>
+                        <th>Especialidade</th>
+                        <th class="acao">Editar</th>
+                        <th class="acao">Excluir</th>
+                    </tr>
+                </thead>
+                <!-- Corpo da tabela (será preenchido dinamicamente com JavaScript) -->
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Modal para inclusão/edição de líderes -->
+    <div class="modal-container">
+        <div class="modal">
+            <form>
+                <!-- Campo para inserir o nome -->
+                <label for="m-nome">Nome</label>
+                <input id="m-nome" type="text" required />
+
+                <!-- Campo para inserir a matrícula -->
+                <label for="m-matrícula">Matrícula</label>
+                <input id="m-matrícula" type="number" required />
+
+                <!-- Menu suspenso para selecionar a função -->
+                <label for="m-função">Função</label>
+                <select name="função" id="m-função" required>
+                    <option value="">Escolha a Função</option>
+                    <option value="Líder">Líder</option>
+                    <option value="Supervisão">Supervisão</option>
+                    <option value="Coordenação">Coordenação</option>
+                    <option value="Auxiliar">Auxiliar</option>
+                    <option value="Assistente">Assistente</option>
+                    <option value="Técnico de Segurança">Técnico de Segurança</option>
+                    <option value="Técnico de Qualidade">Técnico de Qualidade</option>
+                    <option value="Técnico de Planejamento">Técnico de Planejamento</option>
+                </select>
+
+                <!-- Menu suspenso para selecionar a especialidade -->
+                <label for="m-especialidade">Especialidade</label>
+                <select name="especialidade" id="m-especialidade" required>
+                    <option value="">Escolha a Especialidade</option>
+                    <option value="Andaime">Andaime</option>
+                    <option value="Pintura">Pintura</option>
+                    <option value="Isolamento Térmico">Isolamento Térmico</option>
+                    <option value="Complementar">Complementar</option>
+                    <option value="SSMA">SSMA</option>
+                    <option value="Gestão">Gestão</option>
+                    <option value="Qualidade">Qualidade</option>
+                    <option value="Planejamento">Planejamento</option>
+                </select>
+                <!-- Botão para salvar os dados do líder -->
+                <button id="btnSalvar">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Inclui o arquivo de script JavaScript -->
+    <script src="js/cadastro-lideres.js"></script>
+</body>
+</html>
